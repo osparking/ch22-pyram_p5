@@ -31,13 +31,22 @@ public class FlightWithPassengerTest {
   @Deployment
   public static JavaArchive createDeployment() {
     return ShrinkWrap.create(JavaArchive.class)
-        .addClasses(Passenger.class, Flight.class, FlightProducer.class)
+        .addClasses(Passenger.class, Flight.class, FlightProducer.class,
+            DistanceManager.class)
         .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
   }
 
   @Inject
   @FlightNumber(number = "AA1234")
   Flight flight;
+  
+  @Inject
+  @FlightNumber(number = "AA1235")
+  Flight flight2;
+  
+  @Inject
+  @FlightNumber(number = "AA1236")
+  Flight flight3;
 
   @Spy
   DistanceManager distanceManager;
