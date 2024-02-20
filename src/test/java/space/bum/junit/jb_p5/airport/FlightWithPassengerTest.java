@@ -48,28 +48,13 @@ public class FlightWithPassengerTest {
   @FlightNumber(number = "AA1236")
   Flight flight3;
 
-  @Spy
+  @Inject
   DistanceManager distanceManager;
-
-  @Rule
-  public MockitoRule mockitoRule = MockitoJUnit.rule();
-
-  private static Map<Passenger, Integer> passengerDistances = new HashMap<>();
-
-  @BeforeClass
-  public static void setUp() {
-    passengerDistances.put(new Passenger("940207-6459423", "Susan Todd", "GB"),
-        2100);
-    passengerDistances
-        .put(new Passenger("860602-6749821", "Harry Christensen", "GB"), 4200);
-    passengerDistances.put(new Passenger("850205-3917188", "정성민", "KR"),
-        6300);
-  }
 
   @Test
   public void testFlightsDistances() {
-    when(distanceManager.getPassengerDistances())
-        .thenReturn(passengerDistances);
+//    when(distanceManager.getPassengerDistances())
+//        .thenReturn(passengerDistances);
 
     distanceManager.calculateGivenPoints();
 
