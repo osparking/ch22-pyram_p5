@@ -60,7 +60,7 @@ public class FlightWithPassengerTest {
         .get(new Passenger("940207-6459423", "Susan Todd", "GB")).longValue());
     assertEquals(420,
         distanceManager.getPassengerPoints()
-            .get(new Passenger("860602-6749821", "Harry Christensen", "GB"))
+            .get(new Passenger("860602-2749821", "Harry Christensen", "KR"))
             .longValue());
     assertEquals(630, distanceManager.getPassengerPoints()
         .get(new Passenger("850205-3917188", "정성민", "KR")).longValue());
