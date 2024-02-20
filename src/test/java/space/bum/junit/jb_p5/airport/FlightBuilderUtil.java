@@ -13,6 +13,7 @@ public class FlightBuilderUtil {
 
     flight.setOrigin("Seoul(ICN)");
     flight.setDestination("Shanghai(PVG)");
+    flight.setDistance(2100);
 
     try (BufferedReader br = new BufferedReader(
         new FileReader(fileName))) {
