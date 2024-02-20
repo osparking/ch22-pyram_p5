@@ -19,14 +19,14 @@ public class FlightProducer {
   @Produces
   @FlightNumber(number = "AA1235")
   public Flight createFlight2() throws IOException {
-    return FlightBuilderUtil.buildFlightFromCsv("AA1235", 36,
+    return FlightBuilderUtil.buildFlightFromCsv("AA1235", 21,
         "src/test/resources/flights_information2.csv");
   }
 
   @Produces
   @FlightNumber(number = "AA1236")
   public Flight createFlight3() throws IOException {
-    return FlightBuilderUtil.buildFlightFromCsv("AA1236", 24,
+    return FlightBuilderUtil.buildFlightFromCsv("AA1236", 27,
         "src/test/resources/flights_information3.csv");
   }
 }
