@@ -39,11 +39,11 @@ public class FlightWithPassengerTest {
   @Inject
   @FlightNumber(number = "AA1234")
   Flight flight;
-  
+
   @Inject
   @FlightNumber(number = "AA1235")
   Flight flight2;
-  
+
   @Inject
   @FlightNumber(number = "AA1236")
   Flight flight3;
@@ -53,8 +53,14 @@ public class FlightWithPassengerTest {
 
   @Test
   public void testFlightsDistances() {
-//    when(distanceManager.getPassengerDistances())
-//        .thenReturn(passengerDistances);
+    flight.getPassengers()
+        .forEach(p -> distanceManager.addDistance(p, flight.getDistance()));
+
+    flight2.getPassengers()
+        .forEach(p -> distanceManager.addDistance(p, flight2.getDistance()));
+
+    flight3.getPassengers()
+        .forEach(p -> distanceManager.addDistance(p, flight3.getDistance()));
 
     distanceManager.calculateGivenPoints();
 
