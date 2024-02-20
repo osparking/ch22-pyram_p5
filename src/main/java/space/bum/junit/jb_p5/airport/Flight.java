@@ -1,5 +1,6 @@
 package space.bum.junit.jb_p5.airport;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -7,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Flight {
   private String flightNumber;
-  Set<Passenger> passengers = new HashSet<>();
+  private Set<Passenger> passengers = new HashSet<>();
   private int seats;
   private String origin;
   private String destination;
@@ -45,7 +46,7 @@ public class Flight {
   }
 
   public Set<Passenger> getPassengers() {
-    return passengers;
+    return Collections.unmodifiableSet(passengers);
   }
 
   public int getSeats() {
