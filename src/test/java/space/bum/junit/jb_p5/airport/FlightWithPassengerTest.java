@@ -22,8 +22,8 @@ import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import space.bum.junit.jb_p4.airport.annotation.FlightNumber;
-import space.bum.junit.jb_p4.airport.producer.FlightProducer;
+import space.bum.junit.jb_p5.airport.annot.FlightNumber;
+import space.bum.junit.jb_p5.airport.producer.FlightProducer;
 
 @RunWith(Arquillian.class)
 public class FlightWithPassengerTest {
