@@ -19,6 +19,10 @@ public class DistanceManager {
   }
 
   public void addDistance(Passenger passenger, int distance) {
+    if (passengerDistances.containsKey(passenger)) {
+      distance += passengerDistances.get(passenger);
+    }
+    passengerDistances.put(passenger,  distance);
   }
 
   public void calculateGivenPoints() {
